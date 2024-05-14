@@ -75,12 +75,9 @@ export function Navbar() {
           }`}
         >
           <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            Docs
-          </NavItem>
-        </ul>
+          <NavItem>About Me</NavItem>
+          <NavItem>Contact</NavItem>
+         </ul>
         <div className="hidden items-center lg:flex gap-2">
           <Button variant="text" color={isScrolling ? "gray" : "white"}>
             Log in
