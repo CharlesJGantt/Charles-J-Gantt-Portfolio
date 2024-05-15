@@ -59,7 +59,7 @@ export function Navbar() {
 
   return (
     <div>
-      <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
+      <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         Material Tailwind
       </Typography>
       <ul
