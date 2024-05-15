@@ -54,10 +54,11 @@ export function ContactForm() {
       </Typography>
     <div className="container mx-auto mb-5 md:mb-20 text-center">
       
-      <Typography variant="h1" color="blue-gray" className="mb-4" >
+      <Typography variant="h1" color="blue-gray" className="mb-4" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+
         <p>Say Hi!</p>
       </Typography>
-      <Typography variant="lead" className="mx-auto !text-gray-500" >
+      <Typography variant="lead" className="mx-auto !text-gray-500" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         Any questions or remarks? Just send me a messaage!
       </Typography>
     </div>
@@ -65,7 +66,7 @@ export function ContactForm() {
   <Card shadow={true} className="border border-gray/50">
     <CardBody className="flex justify-center items-center" >
       <div className="w-full rounded-lg h-full py-8 p-5 md:p-16 bg-gray-900">
-        <Typography variant="h4" color="white" className="mb-2">
+        <Typography variant="h4" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Contact Information
         </Typography>
         <Typography
@@ -74,20 +75,20 @@ export function ContactForm() {
         </Typography>
         <div className="flex gap-5">
           <PhoneIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" >
+          <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             +803-439-8943
           </Typography>
         </div>
         <div className="flex my-2 gap-5">
           <EnvelopeIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" >
+          <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             cjgantt@mail.com
           </Typography>
         </div>
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" >
+         <Typography variant="h6" color="white" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             Linkedin
            </Typography>
           </a>
@@ -95,7 +96,7 @@ export function ContactForm() {
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://open-source-silicon.slack.com/team/U01LRHC4AFR" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" >
+         <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             Slack
            </Typography>
           </a>
@@ -103,7 +104,7 @@ export function ContactForm() {
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://twitter.com/makersworkbench" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" >
+         <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
             Twitter
            </Typography>
           </a>

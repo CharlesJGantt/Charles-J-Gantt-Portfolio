@@ -17,7 +17,7 @@ function Hero() {
           className="w-40 rounded-xl"
         />
         <div className="flex mt-16 justify-between">
-          <Typography variant="h5" className="text-3xl">
+          <Typography variant="h5" className="text-3xl" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             Charles J Gantt
           </Typography>
           <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351/" target="_blank" rel="noopener noreferrer">
@@ -26,25 +26,31 @@ function Hero() {
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold">3k+</Typography>
-            <Typography className="!text-gray-500 font-normal">
+            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+              3k+
+              </Typography>
+            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
               Posts
             </Typography>
           </div>
           <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold">15k</Typography>
-            <Typography className="!text-gray-500 font-normal">
+            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+              15k
+            </Typography>
+            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
               Followers
             </Typography>
           </div>
           <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold" >1-Mil+</Typography>
-            <Typography className="!text-gray-500 font-normal">
+            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+              1-Mil+
+              </Typography>
+            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
               Views
             </Typography>
           </div>
         </div>
-        <Typography variant="lead" className="!text-gray-500 mt-8">
+        <Typography variant="lead" className="!text-gray-500 mt-8" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           I&apos;m a seasoned Content Creator, Freelance Writer, and Drupal Developer with 15+ years of experience. Specializing in Drupal site building and electronics projects, I excel in managing multiple tasks and staying updated on industry trends. Let&apos;s connect and discuss how I can contribute to your projects.
         </Typography>
        </div>

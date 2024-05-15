@@ -132,7 +132,7 @@ export function LatestBlogPosts() {
   return (
     <section className="py-8 px-8"> {/* Reduced vertical padding here */}
       <div className="container mx-auto mb-4"> {/* Reduced margin bottom here */}
-        <Typography variant="h3" color="blue-gray">
+        <Typography variant="h3" color="blue-gray" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Check my latest content
         </Typography>
       </div>
