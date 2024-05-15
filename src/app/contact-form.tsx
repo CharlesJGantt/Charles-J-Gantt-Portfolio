@@ -69,10 +69,6 @@ export function ContactForm() {
         <Typography variant="h4" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Contact Information
         </Typography>
-        <Typography
-                variant="lead"
-                className="mx-auto mb-8 text-base !text-gray-500"         >
-        </Typography>
         <div className="flex gap-5">
           <PhoneIcon className="h-6 w-6 text-white" />
           <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
