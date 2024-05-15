@@ -161,8 +161,8 @@ export function LatestBlogPosts() {
       ) : (
         <div className="flex justify-center mt-6"> {/* Reduced margin top here */}
           <Button onClick={toggleShowAll} className="bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50" size="lg">
-  Show Less
-</Button>
+          Show Less
+          </Button>
             Show Less
           </Button>
         </div>
