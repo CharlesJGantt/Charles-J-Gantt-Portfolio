@@ -15,7 +15,9 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="small"
-        className="font-medium"
+        className={`font-medium ${
+          href ? "text-blue-gray-700" : "text-gray-700"
+        } transition-colors hover:text-gray-900`}
       >
         {children}
       </Typography>
@@ -46,11 +48,7 @@ export function Navbar() {
 
   React.useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
+      setIsScrolling(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
