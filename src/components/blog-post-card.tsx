@@ -19,7 +19,7 @@ interface BlogPostCardProps {
 export function BlogPostCard({ img, title, desc }: BlogPostCardProps) {
   return (
     <Card color="transparent" shadow={false} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52" >
+      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         <Image width={768} height={768} src={img} alt={title} className="h-full w-full object-cover" />
       </CardHeader>
       <CardBody className="p-0" >
