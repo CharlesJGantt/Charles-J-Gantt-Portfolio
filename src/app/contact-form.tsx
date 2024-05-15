@@ -63,7 +63,7 @@ export function ContactForm() {
       </Typography>
     </div>
     <div className="container mx-auto">
-  <Card shadow={true} className="border border-gray/50">
+  <Card shadow={true} className="border border-gray/50" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
     <CardBody className="flex justify-center items-center" >
       <div className="w-full rounded-lg h-full py-8 p-5 md:p-16 bg-gray-900">
         <Typography variant="h4" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
