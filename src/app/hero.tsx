@@ -20,43 +20,35 @@ function Hero() {
           <Typography variant="h5" className="text-3xl">
             Charles J Gantt
           </Typography>
-          <Button color="gray">follow</Button>
+          <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351/" target="_blank" rel="noopener noreferrer">
+          <Button color="gray" className="w-auto">Linkedin</Button>
+          </a>
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 mt-3">
             <Typography className="!text-gray-900 font-bold">3k+</Typography>
             <Typography className="!text-gray-500 font-normal">
-              Pieces of Content
+              Posts
             </Typography>
           </div>
           <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold">15k+</Typography>
+            <Typography className="!text-gray-900 font-bold">15k</Typography>
             <Typography className="!text-gray-500 font-normal">
               Followers
             </Typography>
           </div>
           <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold">1.4-Million</Typography>
+            <Typography className="!text-gray-900 font-bold">1-Mil+</Typography>
             <Typography className="!text-gray-500 font-normal">
-              YouTube Video Views
+              Views
             </Typography>
           </div>
         </div>
-        <Typography variant="lead" className="!text-gray-500 mt-8 text-justify">
-        With over 15 years of diverse experience as a Content Creator, Freelance Writer, Drupal Developer, and freelance electrical engineer, I bring a wealth of expertise in technical content creation, web development, and electronics projects. Specializing in Drupal site building and staying updated on industry trends, I excel in managing multiple projects and thrive in fast-paced environments. With a comprehensive background in electronics and YouTube content creation, including design work with Autodesk Fusion 360 and 3D printing, I offer a unique blend of technical proficiency and effective communication skills. Let's connect to discuss how I can contribute to your projects.
+        <Typography variant="lead" className="!text-gray-500 mt-8">
+          
+I'm a seasoned Content Creator, Freelance Writer, and Drupal Developer with 15+ years of experience. Specializing in Drupal site building and electronics projects, I excel in managing multiple tasks and staying updated on industry trends. Let's connect and discuss how I can contribute to your projects.
         </Typography>
-        <Button
-          variant="text"
-          color="gray"
-          className="flex items-center gap-2 mt-2"
-        >
-          more about me
-          <ArrowRightIcon
-            strokeWidth={3}
-            className="h-3.5 w-3.5 text-gray-900"
-          />
-        </Button>
-      </div>
+       </div>
     </header>
   );
 }

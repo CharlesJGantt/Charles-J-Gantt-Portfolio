@@ -1,5 +1,5 @@
 // components
-import { Navbar, Footer } from "@/components";
+import { Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
@@ -9,11 +9,9 @@ import ContactForm from "./contact-form";
 export default function Campaign() {
   return (
     <>
-      <Navbar />
       <Hero />
       <LatestBlogPosts />
       <ContactForm />
-      <Footer />
     </>
   );
 }
