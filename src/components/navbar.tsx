@@ -52,13 +52,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
-    >
+    <MTNavbar fullWidth={true} shadow={false} blurred={false} color="white" className="fixed w-full top-0 z-10 bg-transparent" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
       <div className="container mx-auto flex items-center justify-between">
         <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
           Material Tailwind
