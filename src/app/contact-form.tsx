@@ -19,7 +19,7 @@ export function ContactForm() {
           About Me
         </Typography>
       </div>
-      <Typography variant="lead" className="text-gray-500 mt-1" >
+      <Typography variant="lead" className="text-gray-500 mt-1" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
        <p className="mb-3 text-gray-500 dark:text-gray-500">
        With over 15 years of experience as a Content Creator, Freelance Writer and Drupal Developer, 
        I bring a wealth of expertise in both technical content creation and web development. Throughout my career, 
