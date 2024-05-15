@@ -18,20 +18,20 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ img, title, desc }: BlogPostCardProps) {
   return (
-    <Card color="transparent" shadow={false}>
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52">
+    <Card color="transparent" shadow={false} children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <Image width={768} height={768} src={img} alt={title} className="h-full w-full object-cover" />
       </CardHeader>
-      <CardBody className="p-0">
+      <CardBody className="p-0" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <a
           href="#"
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
         >
-          <Typography variant="h5" className="mb-2">
+          <Typography variant="h5" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             {title}
           </Typography>
         </a>
-        <Typography className="mb-3 font-normal !text-gray-500">
+        <Typography className="mb-3 font-normal !text-gray-500" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           {desc}
         </Typography>
        </CardBody>

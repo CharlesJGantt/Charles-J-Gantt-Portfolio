@@ -15,7 +15,7 @@ export function ContactForm() {
   return (
        <section className="container mx-auto px-8 h-[22rem] lg:px-48 translate-y-64"> 
         <div className="text-center mb-6"> {/* Centered "About Me" heading */}
-        <Typography variant="h3" className="text-blue-gray">
+        <Typography variant="h3" className="text-blue-gray" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           About Me
         </Typography>
       </div>
