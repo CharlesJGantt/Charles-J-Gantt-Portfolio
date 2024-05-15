@@ -1,12 +1,11 @@
 import React from "react";
-import { Typography, IconButton, Collapse, Button } from "@material-tailwind/react";
+import { IconButton, Collapse, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
 }
-
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
@@ -15,9 +14,10 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="small"
-        className={`font-medium ${
-          href ? "text-blue-gray-700" : "text-gray-700"
-        } transition-colors hover:text-gray-900`}
+        className="font-medium"
+        placeholder=""
+        onPointerEnterCapture={() => {}}
+        onPointerLeaveCapture={() => {}}
       >
         {children}
       </Typography>
