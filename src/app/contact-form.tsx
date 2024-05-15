@@ -69,13 +69,7 @@ export function ContactForm() {
         <Typography variant="h4" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Contact Information
         </Typography>
-        <div className="flex gap-5">
-          <PhoneIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-            +803-439-8943
-          </Typography>
-        </div>
-        <div className="flex my-2 gap-5">
+      <div className="flex my-2 gap-5">
           <EnvelopeIcon className="h-6 w-6 text-white" />
           <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             cjgantt@mail.com
