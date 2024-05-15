@@ -1,6 +1,4 @@
 // components
-import { Footer } from "@/components";
-
 // sections
 import Hero from "./hero";
 import LatestBlogPosts from "./latest-blog-posts";
