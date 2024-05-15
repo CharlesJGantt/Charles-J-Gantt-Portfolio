@@ -76,7 +76,7 @@ export function Navbar() {
           Log in
         </Button>
         <a href="https://www.material-tailwind.com/blocks" target="_blank">
-          <Button color={isScrolling ? "gray" : "white"}>Blocks</Button>
+          <Button color={isScrolling ? "gray" : "white"} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         </a>
       </div>
       <IconButton
