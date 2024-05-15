@@ -74,20 +74,20 @@ export function ContactForm() {
         </Typography>
         <div className="flex gap-5">
           <PhoneIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+          <Typography variant="h6" color="white" className="mb-2" >
             +803-439-8943
           </Typography>
         </div>
         <div className="flex my-2 gap-5">
           <EnvelopeIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+          <Typography variant="h6" color="white" className="mb-2" >
             cjgantt@mail.com
           </Typography>
         </div>
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+         <Typography variant="h6" color="white" >
             Linkedin
            </Typography>
           </a>
@@ -95,7 +95,7 @@ export function ContactForm() {
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://open-source-silicon.slack.com/team/U01LRHC4AFR" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+         <Typography variant="h6" color="white" className="mb-2" >
             Slack
            </Typography>
           </a>
@@ -103,19 +103,19 @@ export function ContactForm() {
         <div className="flex my-2 gap-5">
           <LinkIcon className="h-6 w-6 text-white" />
           <a href="https://twitter.com/makersworkbench" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+         <Typography variant="h6" color="white" className="mb-2" >
             Twitter
            </Typography>
           </a>
         </div>
         <div className="flex items-center gap-5">
-          <IconButton variant="text" color="white" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+          <IconButton variant="text" color="white" >
             <i className="fa-brands fa-facebook text-lg" />
           </IconButton>
-          <IconButton variant="text" color="white" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+          <IconButton variant="text" color="white" >
             <i className="fa-brands fa-instagram text-lg" />
           </IconButton>
-          <IconButton variant="text" color="white" children={undefined} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+          <IconButton variant="text" color="white" >
             <i className="fa-brands fa-github text-lg" />
           </IconButton>
         </div>

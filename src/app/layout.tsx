@@ -10,9 +10,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Author Page",
+  title: "Portfolio Of Charles J Gantt",
   description:
-    'Introducing Tailwind Author Page, a free "About the Author" blog page based on Tailwind CSS and Material Tailwind.',
+    'Charles J Gantt is a Content Creator, Drupal Developer, and a freelance Electrical Engineer.',
 };
 
 export default function RootLayout({
