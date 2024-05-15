@@ -15,13 +15,7 @@ interface NavItemProps {
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="small"
-        className="font-medium"
-      >
+      <Typography as="a" href={href || "#"} target={href ? "_blank" : "_self"} variant="small" className="font-medium" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         {children}
       </Typography>
     </li>
