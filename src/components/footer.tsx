@@ -72,7 +72,7 @@ export function Navbar() {
         <NavItem>Contact</NavItem>
       </ul>
       <div className="hidden items-center lg:flex gap-2">
-        <Button variant="text" color={isScrolling ? "gray" : "white"}>
+        <Button variant="text" color={isScrolling ? "gray" : "white"} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Log in
         </Button>
         <a href="https://www.material-tailwind.com/blocks" target="_blank">
