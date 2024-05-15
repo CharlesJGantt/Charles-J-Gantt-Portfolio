@@ -22,7 +22,7 @@ export function BlogPostCard({ img, title, desc }: BlogPostCardProps) {
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         <Image width={768} height={768} src={img} alt={title} className="h-full w-full object-cover" />
       </CardHeader>
-      <CardBody className="p-0" >
+      <CardBody className="p-0" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         <a
           href="#"
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
