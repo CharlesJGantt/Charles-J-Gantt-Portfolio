@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, IconButton } from "@material-tailwind/react";
+import { Typography, IconButton, Collapse, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
@@ -59,13 +59,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
-    >
+    <div>
       <div className="container mx-auto flex items-center justify-between">
         <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
           Material Tailwind
@@ -120,7 +114,7 @@ export function Navbar() {
           </div>
         </div>
       </Collapse>
-    </MTNavbar>
+    </div>
   );
 }
 
