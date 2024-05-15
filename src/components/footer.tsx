@@ -58,7 +58,8 @@ export function Navbar() {
 
   return (
     <div>
-      <div className="container mx-auto flex items-center justify-between">
+      <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>Material Tailwind</Typography>
+
         <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
           Material Tailwind
         </Typography>
