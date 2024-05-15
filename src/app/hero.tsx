@@ -21,7 +21,7 @@ function Hero() {
             Charles J Gantt
           </Typography>
           <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351/" target="_blank" rel="noopener noreferrer">
-          <Button color="gray" className="w-auto" >Linkedin</Button>
+          <Button color="gray" className="w-auto" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>Linkedin</Button>
           </a>
         </div>
         <div className="flex items-center gap-6">
