@@ -1,4 +1,4 @@
-import { Typography, IconButton } from "@material-tailwind/react";
+import { Typography, IconButton, Button } from "@material-tailwind/react";
 
 const LINKS = ["Company", "About Us", "Team", "Product", "Blog", "Pricing"];
 const CURRENT_YEAR = new Date().getFullYear();
@@ -14,7 +14,7 @@ export function Footer() {
                 <Typography
                   as="a"
                   href="#"
-                  className={`py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900 ${
+                  className={`py-1 font-normal text-gray-700 transition-colors hover:text-gray-900 ${
                     idx === LINKS.length - 1 ? "pl-2" : "px-2"
                   }`}
                 >
@@ -37,7 +37,7 @@ export function Footer() {
               <i className="fa-brands fa-github text-lg" />
             </IconButton>
           </div>
-          <Typography className="text-center font-normal !text-gray-700">
+          <Typography className="text-center font-normal text-gray-700">
             &copy; {CURRENT_YEAR} Made with{" "}
             <a href="https://www.material-tailwind.com" target="_blank">
               Material Tailwind
