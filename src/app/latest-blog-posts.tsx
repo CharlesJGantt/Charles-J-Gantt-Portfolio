@@ -154,7 +154,7 @@ export function LatestBlogPosts() {
       </div>
       {!showAll ? (
         <div className="flex justify-center mt-6"> {/* Reduced margin top here */}
-          <Button onClick={toggleShowAll} gray-800 size="lg">
+          <Button onClick={toggleShowAll} color="gray-800" size="lg" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
             {`Show ${BLOG_POSTS.length - 6} more blog posts`}
           </Button>
         </div>
