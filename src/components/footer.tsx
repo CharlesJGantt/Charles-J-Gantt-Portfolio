@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Collapse, Button } from "@material-tailwind/react";
+import { Typography, IconButton, Collapse, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
