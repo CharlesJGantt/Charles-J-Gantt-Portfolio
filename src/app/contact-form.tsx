@@ -106,15 +106,6 @@ export function ContactForm() {
           </a>
         </div>
         <div className="flex items-center gap-5">
-          <IconButton variant="text" color="white">
-            <i className="fa-brands fa-facebook text-lg" />
-          </IconButton>
-          <IconButton variant="text" color="white">
-            <i className="fa-brands fa-instagram text-lg" />
-          </IconButton>
-          <IconButton variant="text" color="white">
-            <i className="fa-brands fa-github text-lg" />
-          </IconButton>
         </div>
       </div>
     </CardBody>
