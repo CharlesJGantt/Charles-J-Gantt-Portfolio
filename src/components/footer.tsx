@@ -6,6 +6,7 @@ interface NavItemProps {
   children: React.ReactNode;
   href?: string;
 }
+
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
@@ -58,41 +59,38 @@ export function Navbar() {
 
   return (
     <div>
-      <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>Material Tailwind</Typography>
-
-        <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
-          Material Tailwind
-        </Typography>
-        <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
-        >
-          <NavItem>Home</NavItem>
-          <NavItem>About Me</NavItem>
-          <NavItem>Contact</NavItem>
-         </ul>
-        <div className="hidden items-center lg:flex gap-2">
-          <Button variant="text" color={isScrolling ? "gray" : "white"}>
-            Log in
-          </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>Blocks</Button>
-          </a>
-        </div>
-        <IconButton
-          variant="text"
-          color="white"
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-        >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
+      <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
+        Material Tailwind
+      </Typography>
+      <ul
+        className={`ml-10 hidden items-center gap-6 lg:flex ${
+          isScrolling ? "text-gray-900" : "text-white"
+        }`}
+      >
+        <NavItem>Home</NavItem>
+        <NavItem>About Me</NavItem>
+        <NavItem>Contact</NavItem>
+      </ul>
+      <div className="hidden items-center lg:flex gap-2">
+        <Button variant="text" color={isScrolling ? "gray" : "white"}>
+          Log in
+        </Button>
+        <a href="https://www.material-tailwind.com/blocks" target="_blank">
+          <Button color={isScrolling ? "gray" : "white"}>Blocks</Button>
+        </a>
       </div>
+      <IconButton
+        variant="text"
+        color="white"
+        onClick={handleOpen}
+        className="ml-auto inline-block lg:hidden"
+      >
+        {open ? (
+          <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+        ) : (
+          <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+        )}
+      </IconButton>
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-blue-gray-900">
