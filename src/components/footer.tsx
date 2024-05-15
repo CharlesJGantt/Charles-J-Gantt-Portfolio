@@ -1,4 +1,5 @@
-import { Typography, IconButton, Button } from "@material-tailwind/react";
+import React from "react";
+import { Typography, IconButton } from "@material-tailwind/react";
 
 const LINKS = ["Company", "About Us", "Team", "Product", "Blog", "Pricing"];
 const CURRENT_YEAR = new Date().getFullYear();
@@ -24,16 +25,44 @@ export function Footer() {
             ))}
           </ul>
           <div className="gap-2 lg:flex items-center justify-center">
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton
+              variant="text"
+              color="gray"
+              size="sm"
+              onClick={() => {}}
+              onMouseEnter={() => {}}
+              onMouseLeave={() => {}}
+            >
               <i className="fa-brands fa-twitter text-lg" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton
+              variant="text"
+              color="gray"
+              size="sm"
+              onClick={() => {}}
+              onMouseEnter={() => {}}
+              onMouseLeave={() => {}}
+            >
               <i className="fa-brands fa-youtube text-lg" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton
+              variant="text"
+              color="gray"
+              size="sm"
+              onClick={() => {}}
+              onMouseEnter={() => {}}
+              onMouseLeave={() => {}}
+            >
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
-            <IconButton variant="text" color="gray" size="sm">
+            <IconButton
+              variant="text"
+              color="gray"
+              size="sm"
+              onClick={() => {}}
+              onMouseEnter={() => {}}
+              onMouseLeave={() => {}}
+            >
               <i className="fa-brands fa-github text-lg" />
             </IconButton>
           </div>
