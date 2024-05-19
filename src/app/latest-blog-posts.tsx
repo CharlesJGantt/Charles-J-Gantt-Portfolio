@@ -5,7 +5,9 @@
 import React, { useState } from "react";
 import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import BlogPostCard from "@/components/blog-post-card";
+import BlogPostCard from "@/components/blog-post-card";``
+import VideoCard from "@/components/VideoCard";
+
 
 const BLOG_POSTS = [
   {
@@ -252,19 +254,14 @@ const VIDEO_POSTS = [
 const generateCardContent = (posts: Array<any>, numToShow: number, toggleShowAll: () => void, isBlog: boolean) => {
   return posts.slice(0, numToShow).map((post: any, idx: number) => (
     <div key={idx}>
-      <Card>
+      <VideoCard title={post.title}>
         <a href={post.url} target="_blank" rel="noopener noreferrer">
           <img src={post.img} alt={post.title} className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`} />
         </a>
-        <CardBody>
+        <div className="p-4">
           <Typography variant="h5" color="blue-gray" className="font-bold">
             {post.title}
           </Typography>
-          {!isBlog && (
-            <Typography variant="body2" color="gray">
-              {post.desc}
-            </Typography>
-          )}
           <a
             href={post.url}
             target="_blank"
@@ -272,14 +269,16 @@ const generateCardContent = (posts: Array<any>, numToShow: number, toggleShowAll
             className="flex items-center text-gray-600 hover:text-gray-800 mt-2"
           >
             <span className="mr-1">{isBlog ? "Read More" : "Watch Video"}</span>
+            {/* Assuming ArrowRightIcon is imported */}
             <ArrowRightIcon className="w-4 h-4" />
           </a>
-        </CardBody>
-      </Card>
+        </div>
+      </VideoCard>
     </div>
   ));
 };
 
+// LatestBlogPosts component
 export function LatestBlogPosts() {
   const [showAllBlogs, setShowAllBlogs] = useState(false); // State for blog posts section
   const [showAllVideos, setShowAllVideos] = useState(false); // State for video posts section
@@ -312,6 +311,7 @@ export function LatestBlogPosts() {
         {BLOG_POSTS.slice(0, numToShowBlogs).map((blogPost, idx) => (
           <div key={idx}>
             <a href={blogPost.url} target="_blank" rel="noopener noreferrer">
+              {/* Assuming BlogPostCard component is imported */}
               <BlogPostCard {...blogPost} />
             </a>
           </div>
