@@ -50,17 +50,9 @@ function Hero() {
             </Typography>
           </div>
         </div>
-        <div className="container mx-auto px-8 sm:px-0 h-auto md:h-full">
-        <Typography
-          variant="lead"
-          className="text-gray-500 mt-8"
-          placeholder=""
-          onPointerEnterCapture={() => {}}
-          onPointerLeaveCapture={() => {}}
-        >
-          I'm a seasoned Content Creator, Freelance Writer, and Drupal Developer with 15+ years of experience. Specializing in Drupal site building and electronics projects, I excel in managing multiple tasks and staying updated on industry trends. Let's connect and discuss how I can contribute to your projects.
+        <Typography variant="lead" className="!text-gray-500 mt-8" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+          I&apos;m a seasoned Content Creator, Freelance Writer, and Drupal Developer with 15+ years of experience. Specializing in Drupal site building and electronics projects, I excel in managing multiple tasks and staying updated on industry trends. Let&apos;s connect and discuss how I can contribute to your projects.
         </Typography>
-      </div>
        </div>
     </header>
   );
