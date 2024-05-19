@@ -3,7 +3,7 @@ import Image from "next/image";
 import {
   Button,
   Typography,
-  Card,
+  Card as CustomCard, // Rename to avoid conflict
   CardHeader,
   CardBody,
 } from "@material-tailwind/react";
@@ -18,7 +18,7 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ img, title, desc }: BlogPostCardProps) {
   return (
-    <Card color="transparent" shadow={false} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
+    <CustomCard color="transparent" shadow={false} placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
         <Image width={768} height={768} src={img} alt={title} className="h-full w-full object-cover" />
       </CardHeader>
@@ -35,7 +35,7 @@ export function BlogPostCard({ img, title, desc }: BlogPostCardProps) {
           {desc}
         </Typography>
        </CardBody>
-    </Card>
+    </CustomCard>
   );
 }
 
