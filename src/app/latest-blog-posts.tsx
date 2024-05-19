@@ -335,7 +335,7 @@ export function LatestBlogPosts() {
               onPointerEnterCapture={() => {}} // Add default event handlers if needed
               onPointerLeaveCapture={() => {}} // Add default event handlers if needed
           >
-            Check my latest blog posts
+            Check Out My Content
           </Typography>
         </div>
         <div className="container mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -353,7 +353,7 @@ export function LatestBlogPosts() {
                   onPointerEnterCapture={() => {}} // Add default event handlers if needed
                   onPointerLeaveCapture={() => {}} // Add default event handlers if needed
               >
-                Show More Blog Posts
+                Show More Content
               </Button>
             </div>
         ) : (
@@ -368,7 +368,7 @@ export function LatestBlogPosts() {
                   onPointerEnterCapture={() => {}} // Add default event handlers if needed
                   onPointerLeaveCapture={() => {}} // Add default event handlers if needed
               >
-                Show Less
+                Show Less Content
               </Button>
             </div>
         )}
@@ -382,7 +382,7 @@ export function LatestBlogPosts() {
               onPointerEnterCapture={() => {}} // Add default event handlers if needed
               onPointerLeaveCapture={() => {}} // Add default event handlers if needed
           >
-            Check my latest videos
+            Check Out My Videos
           </Typography>
         </div>
         <div className="container mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -415,7 +415,7 @@ export function LatestBlogPosts() {
                   onPointerEnterCapture={() => {}} // Add default event handlers if needed
                   onPointerLeaveCapture={() => {}} // Add default event handlers if needed
               >
-                Show Less
+                Show Less Videos
               </Button>
             </div>
         )}
