@@ -69,42 +69,43 @@ export function ContactForm() {
         <Typography variant="h4" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           Contact Information
         </Typography>
-      <div className="flex my-2 gap-5">
-          <EnvelopeIcon className="h-6 w-6 text-white" />
-          <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-            cjgantt@mail.com
-          </Typography>
-        </div>
-        <div className="flex my-2 gap-5">
-          <LinkIcon className="h-6 w-6 text-white" />
-          <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-            Linkedin
-           </Typography>
-          </a>
-        </div>
-        <div className="flex my-2 gap-5">
-          <LinkIcon className="h-6 w-6 text-white" />
-          <a href="https://open-source-silicon.slack.com/team/U01LRHC4AFR" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-            Slack
-           </Typography>
-          </a>
-        </div>
-        <div className="flex my-2 gap-5">
-          <LinkIcon className="h-6 w-6 text-white" />
-          <a href="https://twitter.com/makersworkbench" target="_blank" rel="noopener noreferrer">
-         <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
-            Twitter
-           </Typography>
-          </a>
-        </div>
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col my-2 gap-5"> {/* Added flex-col class to create a flex column layout */}
+          <div className="flex items-center gap-5">
+            <EnvelopeIcon className="h-6 w-6 text-white" />
+            <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+              cjgantt@mail.com
+            </Typography>
+          </div>
+          <div className="flex items-center gap-5">
+            <LinkIcon className="h-6 w-6 text-white" />
+            <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351" target="_blank" rel="noopener noreferrer">
+              <Typography variant="h6" color="white" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+                Linkedin
+              </Typography>
+            </a>
+          </div>
+          <div className="flex items-center gap-5">
+            <LinkIcon className="h-6 w-6 text-white" />
+            <a href="https://open-source-silicon.slack.com/team/U01LRHC4AFR" target="_blank" rel="noopener noreferrer">
+              <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+                Slack
+              </Typography>
+            </a>
+          </div>
+          <div className="flex items-center gap-5">
+            <LinkIcon className="h-6 w-6 text-white" />
+            <a href="https://twitter.com/makersworkbench" target="_blank" rel="noopener noreferrer">
+              <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}} >
+                Twitter
+              </Typography>
+            </a>
+          </div>
         </div>
       </div>
     </CardBody>
   </Card>
 </div>
+
 
   </section>
   );
