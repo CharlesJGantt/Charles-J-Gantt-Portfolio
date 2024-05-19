@@ -2,7 +2,7 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import BlogPostCard from "@/components/blog-post-card";
@@ -118,59 +118,265 @@ const BLOG_POSTS = [
   },
 ];
 
-export function LatestBlogPosts() {
-  const [showAll, setShowAll] = React.useState(false); // State to track whether to show all blog posts
+// Define your video posts data
+const VIDEO_POSTS = [
+  // Video post data here...
+  {
+    img: "/image/blogs/blog-19.png",
+    title: "What Is A NodeMCU Anyway?",
+    desc: "So what is a NodeMCU anyway?. This is the first video in a new series I am doing on the NodeMCU and how it can be used in various IoT applications.  ",
+    url: "https://youtu.be/IHocU-VqsF0", // URL for the seventeenth blog post
+  },
+  {
+    img: "/image/blogs/blog-20.png",
+    title: "DIY Home Automation With NodeMCU",
+    desc: "Welcome back to another installment of The Workbench. In this video how to automate lights and outlets using a NodeMCU, 4-Channel Relay Board, and a 20x4 I2C Character LCD in conjunction with Amazon Alexa. ",
+    url: "https://youtu.be/oZsTO9qaCCE", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-21.png",
+    title: "DIY Home Automation With ESP8266",
+    desc: "Welcome back to another installment of The Makers Workbench. In this video, I describe how I control a LinkNode R4 ESP8266 4-Channel Relay Board With Amazon Alexa, and demo the final results. ",
+    url: "https://youtu.be/t5QEt-vX5Ng", // URL for the seventeenth blog post
+  },
+  {
+    img: "/image/blogs/blog-35.png",
+    title: "The Secret Chartreuse Pepper Recipe",
+    desc: "Dive into the vibrant world of bait making with our latest video",
+    url: "https://youtu.be/upIjbhrAyFY", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-36.png",
+    title: "Carolina Pumpkin: A Legendary Soft Bait Color Recipe",
+    desc: "Step into the timeless tradition of bait making with our latest tutorial, 'Mastering Carolina Pumpkin.",
+    url: "https://youtu.be/OkSfdMA6rr8", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-37.png",
+    title: "Electric Grape: Get Amped with This Bait Recipe",
+    desc: "Dive into the electrifying world of bait making with our newest video, 'Electric Grape: Get Amped with This Electrifying Bass Magnet!",
+    url: "https://youtu.be/53GPB80l9EU", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-38.png",
+    title: "Green Pumpkin: A Happy Accident!",
+    desc: "Uncover the secrets of crafting the perfect Green Pumpkin soft plastic baits in our latest video, 'Green Pumpkin Magic!",
+    url: "https://youtu.be/JNEJxLyDmgE", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-22.png",
+    title: "Raspberry Pi SD Card Setup For Beginner",
+    desc: "In this video, I show you how to use Raspberry Pi Imager to install Raspberry Pi OS / Raspbian onto a microSD card in less than 5-minutes. ",
+    url: "https://youtu.be/eS-N8NCB9rk", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-23.png",
+    title: "Design Honeycomb Patterns In Fusion 360",
+    desc: "This video will teach you how to design honeycomb patterns in the sketch panel in Autodesk Fusion 360.",
+    url: "https://youtu.be/CxAtffOpu34", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-24.png",
+    title: "QuadHands Bench Mount Review",
+    desc: "Are These The Best Helping Hands on Amazon? The kind people over at Alphidia sent us one of their QuadHands Workbench Mount third hand soldering helper for review",
+    url: "https://youtu.be/MAHOTCn4_vI", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-25.png",
+    title: "Expand The File System On A Raspberry Pi",
+    desc: "In this video, I show you how to expand the file system on a Raspberry Pi that is running Raspberry Pi OS / Raspbian.",
+    url: "https://youtu.be/8oJ8sYYnpsg", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-26.png",
+    title: "Review: Veiko Aluminum Angle T-Square",
+    desc: "In this video, I review the VEIKO Aluminum Alloy 300mm Angle Positioning T-Square from Banggood.com. ",
+    url: "https://youtu.be/QbZOnt8zTSc", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-27.png",
+    title: "Headless Raspberry Pi",
+    desc: "Welcome back to another installment of The Workbench. In this video, I teach you how to use Raspberry Pi Imager to install Raspberry Pi OS LITE (Headless) onto an SD card in less than 5-minutes.",
+    url: "https://youtu.be/Vbl0a2V4tLw", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-28.png",
+    title: "Review: DrillPro Aluminum Clamping Square",
+    desc: "In this tool review video, I take an in-depth look at the Drillpro Woodworking Precision Clamping Square 2-piece set from Banggood.com. ",
+    url: "https://youtu.be/Xac_cIgMTDo", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-29.png",
+    title: "Hands On: PCDuino4 Nano Overview",
+    desc: "Welcome back to another installment of The Makers Workbench. In this video I give a hands on overview of the PCDuino4 Nano Single Board Computer. ",
+    url: "https://youtu.be/DjmDNIkYeQM", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-30.png",
+    title: "Review: EDSYN Loner 971e",
+    desc: "This is the first video in a series of Soldering Station Review by Charles. In this video he takes a look at the Edsyn Loner 971e, a high-performance soldering station made right here in the USA",
+    url: "https://youtu.be/C75P3AmLs1o", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-31.png",
+    title: "Review: Edsyn Soldapullt ZD500DX",
+    desc: "This is the second video in a series of soldering equipment reviews by Charles. In this video he takes a look at the Edsyn Soldapullt ZD500DX, a self-contained, hot-tip desoldering station made right here in the USA! ",
+    url: "https://youtu.be/MqDXRvOpiU0", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-32.png",
+    title: "3D Printing A Hanger For The Soldapullt",
+    desc: "In this video, Charles designs and 3D prints a clip-in style hanger for Edsyn Soldapullt Deluxe Desoldering Pump.",
+    url: "https://youtu.be/wvGFWIkBClg", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-33.png",
+    title: "Use NirCMD To Change Default Audio Device",
+    desc: "I'm using a program called NirCMD to help automate the process. You can find a link to the NirCMD webpage I use in this video, below. Also included below is the single line command I use in the bash script. ",
+    url: "https://youtu.be/NR6JvdsRbCg", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-34.png",
+    title: "Building a Benchtop Power Supply",
+    desc: "In this episode we will be building a benchtop power supply that is capable of handling up to 650w of juice to power all of the projects that might come across out workbench.",
+    url: "https://youtu.be/M7gI1URan3E", // URL for the eighteenth blog post
+  },
+  {
+    img: "/image/blogs/blog-39.png",
+    title: "Review: Geko E100 Dash Cam",
+    desc: "Welcome back to another installment of TheMakersWorkbench Reviews. In this episode we take a look at the Geko E100 Dashcam, A budget friendly offering that boast high-end features. ",
+    url: "https://youtu.be/zMmmDkRNS-w", // URL for the eighteenth blog post
+  },
+];
 
-  // Function to toggle showAll state
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
+const generateCardContent = (posts, numToShow, toggleShowAll, isBlog) => {
+  return posts.slice(0, numToShow).map((post, idx) => (
+    <div key={idx}>
+      <Card>
+        <a href={post.url} target="_blank" rel="noopener noreferrer">
+          <img src={post.img} alt={post.title} className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`} /> {/* Added rounded-lg for more rounded corners */}
+        </a>
+        <CardBody>
+          <Typography variant="h5" color="blue-gray" className="font-bold"> {/* Updated the variant to h5 */}
+            {post.title}
+          </Typography>
+          {isBlog && (  // Check if it's a blog post, then render description
+            <Typography variant="body2" color="gray">
+              {post.desc}
+            </Typography>
+          )}
+          <a
+            href={post.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-gray-600 hover:text-gray-800 mt-2"
+          >
+            <span className="mr-1">{isBlog ? "Read More" : "Watch Video"}</span>
+            <ArrowRightIcon className="w-4 h-4" />
+          </a>
+        </CardBody>
+      </Card>
+    </div>
+  ));
+};
+
+export function LatestBlogPosts() {
+  const [showAllBlogs, setShowAllBlogs] = useState(false); // State for blog posts section
+  const [showAllVideos, setShowAllVideos] = useState(false); // State for video posts section
+
+  // Function to toggle showAll state for blog posts section
+  const toggleShowAllBlogs = () => {
+    setShowAllBlogs(!showAllBlogs);
   };
 
-  // Determine the number of blog posts to display based on showAll state
-  const numToShow = showAll ? BLOG_POSTS.length : 6;
+  // Function to toggle showAll state for video posts section
+  const toggleShowAllVideos = () => {
+    setShowAllVideos(!showAllVideos);
+  };
+
+  // Determine the number of blog posts to display based on showAllBlogs state
+  const numToShowBlogs = showAllBlogs ? BLOG_POSTS.length : 6;
+
+  // Determine the number of video posts to display based on showAllVideos state
+  const numToShowVideos = showAllVideos ? VIDEO_POSTS.length : 6;
 
   return (
-    <section className="py-8 px-8"> {/* Reduced vertical padding here */}
-      <div className="container mx-auto mb-4"> {/* Reduced margin bottom here */}
-        <Typography variant="h3" color="blue-gray" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-          Check my latest content
+    <section className="py-8 px-8">
+      {/* Blog Posts Section */}
+      <div className="container mx-auto mb-4">
+        <Typography variant="h3" color="blue-gray">
+          Check my latest blog posts
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {BLOG_POSTS.slice(0, numToShow).map((blogPost, idx) => (
+        {BLOG_POSTS.slice(0, numToShowBlogs).map((blogPost, idx) => (
           <div key={idx}>
-            <BlogPostCard {...blogPost} />
-            <a
-              href={blogPost.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-gray-600 hover:text-gray-800 mt-2"
-            >
-              <span className="mr-1">Read More</span>
-              <ArrowRightIcon className="w-4 h-4" />
+            <a href={blogPost.url} target="_blank" rel="noopener noreferrer">
+              <BlogPostCard {...blogPost} />
             </a>
           </div>
         ))}
       </div>
-      {!showAll ? (
-        <div className="flex justify-center mt-6"> {/* Reduced margin top here */}
-          <Button onClick={toggleShowAll} className="bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50" size="lg" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-          {`Show ${BLOG_POSTS.length - 6} more blog posts`}
+      {/* Button to toggle showAll state for blog posts section */}
+      {!showAllBlogs ? (
+        <div className="flex justify-center mt-6">
+          <Button
+            onClick={toggleShowAllBlogs}
+            color="gray"
+            buttonType="link"
+            size="lg"
+            ripple="dark"
+          >
+            Show More Blog Posts
           </Button>
         </div>
       ) : (
-        <div className="flex justify-center mt-6"> {/* Reduced margin top here */}
+        <div className="flex justify-center mt-6">
           <Button
-           onClick={toggleShowAll}
-           className="bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50"
-           size="lg"
-            placeholder=""
-            onPointerEnterCapture={() => {}}
-            onPointerLeaveCapture={() => {}}
+            onClick={toggleShowAllBlogs}
+            color="gray"
+            buttonType="link"
+            size="lg"
+            ripple="dark"
           >
-  Show Less
-</Button>
+            Show Less
+          </Button>
+        </div>
+      )}
 
+      {/* Video Posts Section */}
+      <div className="container mx-auto mt-12">
+        <Typography variant="h3" color="blue-gray">
+          Check my latest videos
+        </Typography>
+      </div>
+      <div className="container mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {generateCardContent(VIDEO_POSTS, numToShowVideos, toggleShowAllVideos, false)}
+      </div>
+      {/* Button to toggle showAll state for video posts section */}
+      {!showAllVideos ? (
+        <div className="flex justify-center mt-6">
+          <Button
+            onClick={toggleShowAllVideos}
+            color="gray"
+            buttonType="link"
+            size="lg"
+            ripple="dark"
+          >
+            Show More Videos
+          </Button>
+        </div>
+      ) : (
+        <div className="flex justify-center mt-6">
+          <Button
+            onClick={toggleShowAllVideos}
+            color="gray"
+            buttonType="link"
+            size="lg"
+            ripple="dark"
+          >
+            Show Less
+          </Button>
         </div>
       )}
     </section>
