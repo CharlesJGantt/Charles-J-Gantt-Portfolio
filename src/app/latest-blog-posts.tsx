@@ -284,7 +284,6 @@ const generateCardContent = (posts: Array<any>, numToShow: number, isBlog: boole
               {post.title}
             </Typography>
             <Typography
-              variant="h9" 
               color="gray"
               className={`mt-2 overflow-hidden ${isBlog ? '' : 'line-clamp-3'}`}
               style={{ maxHeight: isBlog ? "6em" : "3em" }}
