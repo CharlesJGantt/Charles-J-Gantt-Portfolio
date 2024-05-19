@@ -249,18 +249,18 @@ const VIDEO_POSTS = [
   },
 ];
 
-const generateCardContent = (posts, numToShow, toggleShowAll, isBlog) => {
-  return posts.slice(0, numToShow).map((post, idx) => (
+const generateCardContent = (posts: Array<any>, numToShow: number, toggleShowAll: () => void, isBlog: boolean) => {
+  return posts.slice(0, numToShow).map((post: any, idx: number) => (
     <div key={idx}>
       <Card>
         <a href={post.url} target="_blank" rel="noopener noreferrer">
-          <img src={post.img} alt={post.title} className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`} /> {/* Added rounded-lg for more rounded corners */}
+          <img src={post.img} alt={post.title} className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`} />
         </a>
         <CardBody>
-          <Typography variant="h5" color="blue-gray" className="font-bold"> {/* Updated the variant to h5 */}
+          <Typography variant="h5" color="blue-gray" className="font-bold">
             {post.title}
           </Typography>
-          {isBlog && (  // Check if it's a blog post, then render description
+          {isBlog && (
             <Typography variant="body2" color="gray">
               {post.desc}
             </Typography>
