@@ -52,7 +52,7 @@ export function ContactForm() {
        </p> 
        
       </Typography>
-    <div className="container mx-auto mb-5 md:mb-20 text-center">
+    <div className="container mx-auto mb-5 md:mb-1 text-center">
       
       <Typography variant="h1" color="blue-gray" className="mb-4" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
 
