@@ -260,7 +260,7 @@ const generateCardContent = (posts: Array<any>, numToShow: number, toggleShowAll
           <Typography variant="h5" color="blue-gray" className="font-bold">
             {post.title}
           </Typography>
-          {isBlog && (
+          {!isBlog && (
             <Typography variant="body2" color="gray">
               {post.desc}
             </Typography>
