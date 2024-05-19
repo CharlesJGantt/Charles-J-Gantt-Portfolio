@@ -278,30 +278,24 @@ const generateCardContent = (posts: Array<any>, numToShow: number, toggleShowAll
   ));
 };
 
-// LatestBlogPosts component
 export function LatestBlogPosts() {
-  const [showAllBlogs, setShowAllBlogs] = useState(false); // State for blog posts section
-  const [showAllVideos, setShowAllVideos] = useState(false); // State for video posts section
+  const [showAllBlogs, setShowAllBlogs] = useState(false);
+  const [showAllVideos, setShowAllVideos] = useState(false);
 
-  // Function to toggle showAll state for blog posts section
   const toggleShowAllBlogs = () => {
     setShowAllBlogs(!showAllBlogs);
   };
 
-  // Function to toggle showAll state for video posts section
   const toggleShowAllVideos = () => {
     setShowAllVideos(!showAllVideos);
   };
 
-  // Determine the number of blog posts to display based on showAllBlogs state
   const numToShowBlogs = showAllBlogs ? BLOG_POSTS.length : 6;
 
-  // Determine the number of video posts to display based on showAllVideos state
   const numToShowVideos = showAllVideos ? VIDEO_POSTS.length : 6;
 
   return (
     <section className="py-8 px-8">
-      {/* Blog Posts Section */}
       <div className="container mx-auto mb-4">
         <Typography variant="h3" color="blue-gray">
           Check my latest blog posts
@@ -311,13 +305,11 @@ export function LatestBlogPosts() {
         {BLOG_POSTS.slice(0, numToShowBlogs).map((blogPost, idx) => (
           <div key={idx}>
             <a href={blogPost.url} target="_blank" rel="noopener noreferrer">
-              {/* Assuming BlogPostCard component is imported */}
               <BlogPostCard {...blogPost} />
             </a>
           </div>
         ))}
       </div>
-      {/* Button to toggle showAll state for blog posts section */}
       {!showAllBlogs ? (
         <div className="flex justify-center mt-6">
           <Button
@@ -344,7 +336,6 @@ export function LatestBlogPosts() {
         </div>
       )}
 
-      {/* Video Posts Section */}
       <div className="container mx-auto mt-12">
         <Typography variant="h3" color="blue-gray">
           Check my latest videos
@@ -353,7 +344,6 @@ export function LatestBlogPosts() {
       <div className="container mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {generateCardContent(VIDEO_POSTS, numToShowVideos, toggleShowAllVideos, false)}
       </div>
-      {/* Button to toggle showAll state for video posts section */}
       {!showAllVideos ? (
         <div className="flex justify-center mt-6">
           <Button
