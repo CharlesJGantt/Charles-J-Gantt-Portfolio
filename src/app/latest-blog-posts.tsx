@@ -325,7 +325,7 @@ export function LatestBlogPosts() {
   const numToShowVideos = showAllVideos ? VIDEO_POSTS.length : 6;
 
   return (
-      <section className="py-8 px-8">
+      <section className="blog-top py-8 px-8">
         {/* Blog Posts Section */}
         <div className="container mx-auto mb-4">
           <Typography
