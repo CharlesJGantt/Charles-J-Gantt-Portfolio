@@ -249,54 +249,56 @@ const VIDEO_POSTS = [
 ];
 
 const generateCardContent = (posts: Array<any>, numToShow: number, isBlog: boolean) => {
-  return posts.slice(0, numToShow).map((post: any, idx: number) => (
-      <div key={idx}>
+  return posts.slice(0, numToShow).map((post: any, idx: number) => {
+    return (
+      <div key={idx} className="h-full">
         <Card
-            className="shadow-lg rounded-lg"
-            placeholder="" // Add a placeholder prop if needed
-            onPointerEnterCapture={() => {}} // Add default event handlers if needed
-            onPointerLeaveCapture={() => {}} // Add default event handlers if needed
+          className="shadow-lg rounded-lg h-full"
+          placeholder=""
+          onPointerEnterCapture={() => {}}
+          onPointerLeaveCapture={() => {}}
         >
           <a href={post.url} target="_blank" rel="noopener noreferrer">
             <Image
-                src={post.img}
-                alt={post.title}
-                width={600}
-                height={300}
-                className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`}
+              src={post.img}
+              alt={post.title}
+              width={600}
+              height={300}
+              className={`w-full h-48 object-cover rounded-lg cursor-pointer ${isBlog ? 'rounded-t-lg' : ''}`}
             />
           </a>
           <CardBody
-              placeholder="" // Add a placeholder prop if needed
-              onPointerEnterCapture={() => {}} // Add default event handlers if needed
-              onPointerLeaveCapture={() => {}} // Add default event handlers if needed
+            className="h-full"
+            placeholder=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           >
             <Typography
-                variant="h5"
-                color="blue-gray"
-                className="font-bold"
-                placeholder="" // Add a placeholder prop if needed
-                onPointerEnterCapture={() => {}} // Add default event handlers if needed
-                onPointerLeaveCapture={() => {}} // Add default event handlers if needed
+              variant="h5"
+              color="blue-gray"
+              className="font-bold"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             >
               {post.title}
             </Typography>
-            {!isBlog && (
-                <Typography
-                    variant="h5" // Use a valid variant value here
-                    color="gray"
-                    placeholder="" // Add a placeholder prop if needed
-                    onPointerEnterCapture={() => {}} // Add default event handlers if needed
-                    onPointerLeaveCapture={() => {}} // Add default event handlers if needed
-                >
-                  {post.desc}
-                </Typography>
-            )}
+            <Typography
+              variant="h9" 
+              color="gray"
+              className={`mt-2 overflow-hidden ${isBlog ? '' : 'line-clamp-3'}`}
+              style={{ maxHeight: isBlog ? "6em" : "3em" }}
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
+            >
+              {post.desc}
+            </Typography>
             <a
-                href={post.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-600 hover:text-gray-800 mt-2"
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-gray-600 hover:text-gray-800 mt-2"
             >
               <span className="mr-1">{isBlog ? "Read More" : "Watch Video"}</span>
               <ArrowRightIcon className="w-4 h-4" />
@@ -304,7 +306,8 @@ const generateCardContent = (posts: Array<any>, numToShow: number, isBlog: boole
           </CardBody>
         </Card>
       </div>
-  ));
+    );
+  });
 };
 
 export function LatestBlogPosts() {
