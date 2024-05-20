@@ -73,7 +73,7 @@ export function ContactForm() {
           <div className="flex items-center gap-5">
             <EnvelopeIcon className="h-6 w-6 text-white" />
             <Typography variant="h6" color="white" className="mb-2" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              cjgantt@mail.com
+              cjgantt@gmail.com
             </Typography>
           </div>
           <div className="flex items-center gap-5">
