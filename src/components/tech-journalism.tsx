@@ -11,7 +11,7 @@ const PAGE_SIZE = 6;
 
 function JournalismCard({ post }: { post: JournalismPost }) {
   return (
-    <Card className="overflow-hidden border border-blue-gray-100 shadow-md rounded-xl flex flex-col">
+    <Card className="overflow-hidden border border-blue-gray-100 dark:border-blue-gray-800 shadow-md rounded-xl flex flex-col">
       <a href={post.url} target="_blank" rel="noopener noreferrer" className="relative block h-48">
         <Image
           src={post.img}
@@ -23,13 +23,13 @@ function JournalismCard({ post }: { post: JournalismPost }) {
       </a>
       <div className="p-4 flex flex-col flex-1">
         <p className="text-[11px] font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">{post.publication}</p>
-        <h3 className="text-blue-gray-900 font-semibold text-base leading-snug mb-2">{post.title}</h3>
-        <p className="text-blue-gray-600 text-sm leading-relaxed flex-1 mb-4">{post.desc}</p>
+        <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-2">{post.title}</h3>
+        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed flex-1 mb-4">{post.desc}</p>
         <a
           href={post.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-gray-900 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
+          className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
         >
           Read More <ArrowRightIcon className="w-4 h-4" />
         </a>

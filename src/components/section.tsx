@@ -35,8 +35,8 @@ export function SectionHeading({
         {kicker && (
           <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-2">{kicker}</p>
         )}
-        <h2 className="text-2xl font-bold text-blue-gray-900 mb-1">{title}</h2>
-        {subtitle && <p className="text-sm text-blue-gray-500 max-w-3xl leading-relaxed">{subtitle}</p>}
+        <h2 className="text-2xl font-bold text-blue-gray-900 dark:text-blue-gray-50 mb-1">{title}</h2>
+        {subtitle && <p className="text-sm text-blue-gray-500 dark:text-blue-gray-400 max-w-3xl leading-relaxed">{subtitle}</p>}
       </div>
       {action}
     </div>
@@ -48,7 +48,7 @@ export function Tag({ children, className }: { children: React.ReactNode; classN
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-gray-50 text-blue-gray-700",
+        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-gray-50 text-blue-gray-700 dark:bg-blue-gray-800 dark:text-blue-gray-200",
         className
       )}
     >
@@ -60,7 +60,7 @@ export function Tag({ children, className }: { children: React.ReactNode; classN
 /** Outlined tech-stack badge. */
 export function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-blue-gray-200 text-blue-gray-700 bg-white">
+    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-blue-gray-200 text-blue-gray-700 bg-white dark:border-blue-gray-700 dark:text-blue-gray-200 dark:bg-blue-gray-900">
       {children}
     </span>
   );

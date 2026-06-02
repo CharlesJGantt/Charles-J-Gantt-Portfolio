@@ -19,7 +19,7 @@ function handleThumbError(id: string) {
 export function VideoCard({ video }: { video: Video }) {
   const url = youtubeWatchUrl(video.id);
   return (
-    <Card className="overflow-hidden border border-blue-gray-100 shadow-md rounded-xl flex flex-col">
+    <Card className="overflow-hidden border border-blue-gray-100 dark:border-blue-gray-800 shadow-md rounded-xl flex flex-col">
       <a href={url} target="_blank" rel="noopener noreferrer" className="relative block">
         {/* eslint-disable-next-line @next/next/no-img-element -- YouTube thumbnails need the onError fallback; next/image is overkill at a fixed h-48 */}
         <img
@@ -38,12 +38,12 @@ export function VideoCard({ video }: { video: Video }) {
         </span>
       </a>
       <div className="p-4 flex flex-col flex-1">
-        <h3 className="text-blue-gray-900 font-semibold text-base leading-snug mb-3 flex-1">{video.title}</h3>
+        <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-3 flex-1">{video.title}</h3>
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-gray-900 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
+          className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
         >
           Watch Video <ArrowRightIcon className="w-4 h-4" />
         </a>

@@ -8,7 +8,7 @@ import type { Article } from "@/data/articles";
 /** Article card for the CKEditor writing grid (CLAUDE.md §12, card type 1). */
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <Card className="overflow-hidden border border-blue-gray-100 shadow-md rounded-xl flex flex-col">
+    <Card className="overflow-hidden border border-blue-gray-100 dark:border-blue-gray-800 shadow-md rounded-xl flex flex-col">
       <div className="relative h-48">
         {article.ogImage ? (
           <Image
@@ -33,8 +33,8 @@ export function ArticleCard({ article }: { article: Article }) {
             <Tag key={t}>{t}</Tag>
           ))}
         </div>
-        <h3 className="text-blue-gray-900 font-semibold text-base leading-snug mb-2">{article.title}</h3>
-        <p className="text-blue-gray-600 text-sm leading-relaxed flex-1 mb-4">{article.summary}</p>
+        <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-2">{article.title}</h3>
+        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed flex-1 mb-4">{article.summary}</p>
         {article.coverage && (
           <p className="text-[11px] italic text-blue-gray-400 mb-3 border-t border-blue-gray-50 pt-3">
             {article.coverage}
@@ -44,7 +44,7 @@ export function ArticleCard({ article }: { article: Article }) {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-gray-900 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
+          className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
         >
           Read More <ArrowRightIcon className="w-4 h-4" />
         </a>

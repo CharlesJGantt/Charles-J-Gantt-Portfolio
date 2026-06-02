@@ -76,7 +76,7 @@ export const Typography = React.forwardRef<HTMLElement, TypographyProps>(
     return (
       <Tag
         ref={ref}
-        className={cn("font-sans antialiased text-blue-gray-900", VARIANT_CLASS[variant], colorClass, className)}
+        className={cn("font-sans antialiased text-blue-gray-900 dark:text-blue-gray-50", VARIANT_CLASS[variant], colorClass, className)}
         {...rest}
       >
         {children}
@@ -163,7 +163,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       ref={ref}
       className={cn(
         "relative flex flex-col rounded-xl bg-clip-border",
-        color === "transparent" ? "bg-transparent" : "bg-white text-gray-700",
+        color === "transparent" ? "bg-transparent" : "bg-white text-gray-700 dark:bg-blue-gray-900 dark:text-blue-gray-300",
         shadow && "shadow-md",
         className
       )}

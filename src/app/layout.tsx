@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { Providers } from "@/components/providers";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -63,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <script
@@ -71,10 +72,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <body className={roboto.className}>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${roboto.className} bg-white text-blue-gray-900 dark:bg-blue-gray-950 dark:text-blue-gray-100`}>
+        <Providers>
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

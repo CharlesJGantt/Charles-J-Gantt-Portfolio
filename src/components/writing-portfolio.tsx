@@ -14,7 +14,7 @@ const PAGE_SIZE = 9;
 function FeaturedArticle({ article }: { article: Article }) {
   return (
     <a href={article.url} target="_blank" rel="noopener noreferrer" className="group block mb-10">
-      <div className="grid md:grid-cols-5 rounded-xl overflow-hidden border border-blue-gray-100 shadow-md bg-white">
+      <div className="grid md:grid-cols-5 rounded-xl overflow-hidden border border-blue-gray-100 dark:border-blue-gray-800 shadow-md bg-white dark:bg-blue-gray-900">
         <div className="relative md:col-span-3 h-64 md:h-80">
           {article.ogImage ? (
             <Image
@@ -37,9 +37,9 @@ function FeaturedArticle({ article }: { article: Article }) {
               <Tag key={t}>{t}</Tag>
             ))}
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-blue-gray-900 mb-3 leading-snug">{article.title}</h3>
-          <p className="text-blue-gray-600 leading-relaxed mb-4">{article.summary}</p>
-          <span className="text-blue-gray-900 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+          <h3 className="text-2xl md:text-3xl font-bold text-blue-gray-900 dark:text-blue-gray-50 mb-3 leading-snug">{article.title}</h3>
+          <p className="text-blue-gray-600 dark:text-blue-gray-300 leading-relaxed mb-4">{article.summary}</p>
+          <span className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
             Read More <ArrowRightIcon className="w-4 h-4" />
           </span>
         </div>
@@ -85,7 +85,7 @@ export function WritingPortfolio({ featured, articles }: { featured?: Article; a
               "px-3 py-1 rounded-full text-xs font-medium transition-colors",
               activeFilter === tag
                 ? "bg-blue-gray-900 text-white"
-                : "bg-blue-gray-50 text-blue-gray-700 hover:bg-blue-gray-100"
+                : "bg-blue-gray-50 text-blue-gray-700 hover:bg-blue-gray-100 dark:bg-blue-gray-800 dark:text-blue-gray-200 dark:hover:bg-blue-gray-700"
             )}
           >
             {tag}

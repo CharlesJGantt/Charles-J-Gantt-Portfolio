@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const LINKS = [
   { label: "Writing", href: "#writing" },
@@ -22,12 +23,15 @@ export function Nav() {
             </a>
           ))}
         </div>
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-1.5 bg-white text-blue-gray-900 text-xs font-bold uppercase tracking-widest py-2 px-4 rounded-lg hover:bg-blue-gray-100 transition-colors"
-        >
-          Hire Me <ArrowRightIcon className="w-3.5 h-3.5" />
-        </a>
+        <div className="flex items-center gap-1.5">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-1.5 bg-white text-blue-gray-900 text-xs font-bold uppercase tracking-widest py-2 px-4 rounded-lg hover:bg-blue-gray-100 transition-colors"
+          >
+            Hire Me <ArrowRightIcon className="w-3.5 h-3.5" />
+          </a>
+        </div>
       </nav>
     </header>
   );

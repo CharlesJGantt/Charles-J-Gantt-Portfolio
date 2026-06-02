@@ -5,7 +5,7 @@ export function About() {
   return (
     <Section id="about">
       <SectionHeading title="About" />
-      <div className="max-w-3xl space-y-4 text-blue-gray-600 leading-relaxed">
+      <div className="max-w-3xl space-y-4 text-blue-gray-600 dark:text-blue-gray-300 leading-relaxed">
         <p>
           Independent CKEditor and Drupal specialist. Former Technical Content Marketer at CKEditor. Published on
           CKEditor&apos;s official blog and Acquia&apos;s documentation platform. Open-source Drupal modules with custom

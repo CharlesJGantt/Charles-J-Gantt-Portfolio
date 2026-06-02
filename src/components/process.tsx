@@ -43,7 +43,7 @@ const STEPS = [
 /** How I work - 5-step engagement process (CLAUDE.md §2 page structure #9). */
 export function Process() {
   return (
-    <Section id="process" className="bg-blue-gray-50/60">
+    <Section id="process" className="bg-blue-gray-50/60 dark:bg-blue-gray-900">
       <SectionHeading
         kicker="Engagement"
         title="How I Work"
@@ -54,10 +54,10 @@ export function Process() {
           const Icon = s.icon;
           return (
             <div key={s.n}>
-              <Icon className="w-8 h-8 text-blue-gray-900 mb-3" aria-hidden="true" />
-              <div className="text-sm font-bold text-blue-gray-300 mb-2">{s.n}</div>
-              <h3 className="text-blue-gray-900 font-semibold mb-2">{s.title}</h3>
-              <p className="text-blue-gray-600 text-sm leading-relaxed">{s.body}</p>
+              <Icon className="w-8 h-8 text-blue-gray-900 dark:text-blue-gray-50 mb-3" aria-hidden="true" />
+              <div className="text-sm font-bold text-blue-gray-300 dark:text-blue-gray-600 mb-2">{s.n}</div>
+              <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold mb-2">{s.title}</h3>
+              <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed">{s.body}</p>
             </div>
           );
         })}

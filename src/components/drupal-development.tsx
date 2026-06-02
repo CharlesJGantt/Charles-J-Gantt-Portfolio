@@ -6,7 +6,7 @@ import { MODULES } from "@/data/work";
 /** Section C - Drupal Development & CKEditor 5 Plugins (CLAUDE.md §7C, §9, card type 3). */
 export function DrupalDevelopment() {
   return (
-    <Section id="development" className="bg-blue-gray-50/60">
+    <Section id="development" className="bg-blue-gray-50/60 dark:bg-blue-gray-900">
       <SectionHeading
         kicker="Services"
         title="Drupal Development & CKEditor 5 Plugins"
@@ -14,7 +14,7 @@ export function DrupalDevelopment() {
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
         {MODULES.map((m) => (
-          <Card key={m.name} className="border border-blue-gray-100 shadow-md rounded-xl">
+          <Card key={m.name} className="border border-blue-gray-100 dark:border-blue-gray-800 shadow-md rounded-xl">
             <div className="p-6">
               <div className="flex items-start justify-between mb-4">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-gray-900 text-white">
@@ -30,11 +30,11 @@ export function DrupalDevelopment() {
                   <CodeBracketIcon className="w-5 h-5" />
                 </a>
               </div>
-              <h3 className="text-blue-gray-900 font-bold text-lg leading-snug mb-2">{m.name}</h3>
-              <p className="text-blue-gray-900 text-sm font-semibold mb-3">{m.problem}</p>
+              <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-bold text-lg leading-snug mb-2">{m.name}</h3>
+              <p className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold mb-3">{m.problem}</p>
               <div className="mb-2">
                 {m.description.map((para, i) => (
-                  <p key={i} className="text-blue-gray-600 text-sm leading-relaxed mb-4">
+                  <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed mb-4">
                     {para}
                   </p>
                 ))}
@@ -44,12 +44,12 @@ export function DrupalDevelopment() {
                   <Badge key={s}>{s}</Badge>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4 pt-4 border-t border-blue-gray-100">
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-blue-gray-100 dark:border-blue-gray-800">
                 <a
                   href={m.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-gray-900 text-sm font-semibold hover:underline flex items-center gap-1"
+                  className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold hover:underline flex items-center gap-1"
                 >
                   View on GitHub <ArrowTopRightOnSquareIcon className="w-3.5 h-3.5" />
                 </a>
@@ -58,7 +58,7 @@ export function DrupalDevelopment() {
                     href={m.drupalOrgUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-gray-900 text-sm font-semibold hover:underline flex items-center gap-1"
+                    className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold hover:underline flex items-center gap-1"
                   >
                     View on Drupal.org <ArrowTopRightOnSquareIcon className="w-3.5 h-3.5" />
                   </a>

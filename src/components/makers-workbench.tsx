@@ -25,7 +25,7 @@ export function MakersWorkbench() {
             href={CHANNEL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-gray-900 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap"
+            className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap"
           >
             Watch on YouTube <ArrowTopRightOnSquareIcon className="w-4 h-4" />
           </a>
