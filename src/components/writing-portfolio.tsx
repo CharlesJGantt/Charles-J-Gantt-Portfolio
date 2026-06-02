@@ -69,7 +69,7 @@ export function WritingPortfolio({ featured, articles }: { featured?: Article; a
         title="CKEditor Writing"
         subtitle="Published work for CKEditor's official blog and Acquia's developer platform, covering AI, collaboration, security, Drupal, and CMS strategy for developers, content architects, and enterprise buyers."
       />
-      <p className="text-xs text-blue-gray-400 italic mb-6 max-w-3xl">
+      <p className="text-sm text-blue-gray-400 italic mb-6 max-w-3xl">
         Research conducted using Perplexity for source triangulation and Claude for draft acceleration. All final
         copy written, edited, and approved to CKEditor&apos;s editorial standard under my byline.
       </p>

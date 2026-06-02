@@ -57,7 +57,7 @@ export function Process() {
               <Icon className="w-8 h-8 text-blue-gray-900 dark:text-blue-gray-50 mb-3" aria-hidden="true" />
               <div className="text-sm font-bold text-blue-gray-300 dark:text-blue-gray-600 mb-2">{s.n}</div>
               <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold mb-2">{s.title}</h3>
-              <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed">{s.body}</p>
+              <p className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed">{s.body}</p>
             </div>
           );
         })}

@@ -36,7 +36,7 @@ export function SectionHeading({
           <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-2">{kicker}</p>
         )}
         <h2 className="text-2xl font-bold text-blue-gray-900 dark:text-blue-gray-50 mb-1">{title}</h2>
-        {subtitle && <p className="text-sm text-blue-gray-500 dark:text-blue-gray-400 max-w-3xl leading-relaxed">{subtitle}</p>}
+        {subtitle && <p className="text-base text-blue-gray-500 dark:text-blue-gray-400 max-w-3xl leading-relaxed">{subtitle}</p>}
       </div>
       {action}
     </div>

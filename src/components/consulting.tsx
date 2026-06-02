@@ -22,7 +22,7 @@ export function Consulting() {
               <p className="text-blue-gray-400 text-sm mb-4">{w.roleAndDuration}</p>
               <div className="mb-2">
                 {w.description.map((para, i) => (
-                  <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed mb-4">
+                  <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed mb-4">
                     {para}
                   </p>
                 ))}
@@ -33,7 +33,7 @@ export function Consulting() {
                 ))}
               </div>
               {w.note && (
-                <p className="text-blue-gray-400 text-xs italic border-t border-blue-gray-100 dark:border-blue-gray-800 pt-4">{w.note}</p>
+                <p className="text-blue-gray-400 text-sm italic border-t border-blue-gray-100 dark:border-blue-gray-800 pt-4">{w.note}</p>
               )}
             </div>
           </Card>

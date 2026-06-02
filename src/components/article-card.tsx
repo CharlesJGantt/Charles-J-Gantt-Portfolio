@@ -24,7 +24,7 @@ export function ArticleCard({ article }: { article: Article }) {
       </div>
       <div className="p-4 flex flex-col flex-1">
         {article.publication && (
-          <p className="text-[11px] font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">
+          <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">
             {article.publication}
           </p>
         )}
@@ -34,9 +34,9 @@ export function ArticleCard({ article }: { article: Article }) {
           ))}
         </div>
         <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-2">{article.title}</h3>
-        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed flex-1 mb-4">{article.summary}</p>
+        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed flex-1 mb-4">{article.summary}</p>
         {article.coverage && (
-          <p className="text-[11px] italic text-blue-gray-400 mb-3 border-t border-blue-gray-50 pt-3">
+          <p className="text-sm italic text-blue-gray-400 mb-3 border-t border-blue-gray-50 dark:border-blue-gray-800 pt-3">
             {article.coverage}
           </p>
         )}

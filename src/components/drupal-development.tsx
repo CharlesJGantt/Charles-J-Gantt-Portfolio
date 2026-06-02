@@ -31,10 +31,10 @@ export function DrupalDevelopment() {
                 </a>
               </div>
               <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-bold text-lg leading-snug mb-2">{m.name}</h3>
-              <p className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold mb-3">{m.problem}</p>
+              <p className="text-blue-gray-900 dark:text-blue-gray-50 text-base font-semibold mb-3">{m.problem}</p>
               <div className="mb-2">
                 {m.description.map((para, i) => (
-                  <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed mb-4">
+                  <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed mb-4">
                     {para}
                   </p>
                 ))}

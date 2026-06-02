@@ -29,7 +29,7 @@ export function Timeline() {
                 )}
               </h3>
               <p className="text-blue-gray-500 dark:text-blue-gray-400 text-sm mb-2">{n.role}</p>
-              <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed mb-3">{n.blurb}</p>
+              <p className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed mb-3">{n.blurb}</p>
               <div className="flex flex-wrap gap-2">
                 {n.tags.map((t) => (
                   <Tag key={t}>{t}</Tag>

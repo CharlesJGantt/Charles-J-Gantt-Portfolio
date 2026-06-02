@@ -22,9 +22,9 @@ function JournalismCard({ post }: { post: JournalismPost }) {
         />
       </a>
       <div className="p-4 flex flex-col flex-1">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">{post.publication}</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">{post.publication}</p>
         <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-2">{post.title}</h3>
-        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-sm leading-relaxed flex-1 mb-4">{post.desc}</p>
+        <p className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed flex-1 mb-4">{post.desc}</p>
         <a
           href={post.url}
           target="_blank"
