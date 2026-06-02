@@ -1,13 +1,21 @@
 import type { Config } from "tailwindcss";
-const withMT = require("@material-tailwind/react/utils/withMT");
+import colors from "tailwindcss/colors";
 
-const config: Config = withMT({
+const config: Config = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        // Material Tailwind shipped a `blue-gray` palette; alias it to Tailwind's
+        // `slate` (visually equivalent) so existing `*-blue-gray-*` classes work.
+        "blue-gray": colors.slate,
+      },
+    },
+  },
   plugins: [],
-});
+};
 
 export default config;

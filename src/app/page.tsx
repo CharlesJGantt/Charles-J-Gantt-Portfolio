@@ -1,16 +1,39 @@
-// components
-// sections
 import Hero from "./hero";
-import LatestBlogPosts from "./latest-blog-posts";
-import ContactForm from "./contact-form";
-import "./custom.css";
+import Contact from "./contact";
+import { TrustStrip } from "@/components/trust-strip";
+import { CredentialTriangle } from "@/components/credential-triangle";
+import { WritingPortfolio } from "@/components/writing-portfolio";
+import { TechJournalism } from "@/components/tech-journalism";
+import { Consulting } from "@/components/consulting";
+import { DrupalDevelopment } from "@/components/drupal-development";
+import { Timeline } from "@/components/timeline";
+import { About } from "@/components/about";
+import { Process } from "@/components/process";
+import { MakersWorkbench } from "@/components/makers-workbench";
+import { ClientSeries } from "@/components/client-series";
+import { ARTICLES } from "@/data/articles";
+import { withOgImages } from "@/lib/og";
 
-export default function Campaign() {
+export default async function Home() {
+  const articles = await withOgImages(ARTICLES);
+  const featured = articles.find((a) => a.featured);
+  const supporting = articles.filter((a) => !a.featured);
+
   return (
     <>
       <Hero />
-      <LatestBlogPosts />
-      <ContactForm />
+      <TrustStrip />
+      <CredentialTriangle />
+      <WritingPortfolio featured={featured} articles={supporting} />
+      <TechJournalism />
+      <Consulting />
+      <DrupalDevelopment />
+      <MakersWorkbench />
+      <ClientSeries />
+      <Timeline />
+      <About />
+      <Process />
+      <Contact />
     </>
   );
 }

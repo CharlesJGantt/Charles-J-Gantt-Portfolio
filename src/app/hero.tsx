@@ -1,62 +1,68 @@
-"use client";
-
 import Image from "next/image";
-import { Button, Typography } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
+const METRICS = [
+  { value: "825+", label: "Published Articles" },
+  { value: "15+", label: "Years Experience" },
+  { value: "1M+", label: "Content Views" },
+  { value: "27+", label: "Published Bylines" },
+];
 
+/** Hero: left-aligned copy + metrics, right-side headshot (CLAUDE.md §4). */
 function Hero() {
   return (
-    <header className="bg-gray-900 mb-96">
-      <div className="container mx-auto px-8 h-[22rem] lg:px-48 translate-y-64">
-        <Image
-          width={1024}
-          height={1024}
-          alt="avatar"
-          src="/image/avatar1.jpg"
-          className="w-40 rounded-xl"
-        />
-        <div className="flex mt-16 justify-between">
-          <Typography variant="h5" className="text-3xl" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-            Charles J Gantt
-          </Typography>
-          <a href="https://www.linkedin.com/in/charles-gantt-b5aa8351/" target="_blank" rel="noopener noreferrer">
-          <Button color="gray" className="w-auto" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>Linkedin</Button>
-          </a>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              3k+
-              </Typography>
-            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              Posts
-            </Typography>
+    <section id="top" className="bg-white scroll-mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+          <div className="lg:col-span-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-4">
+              CKEditor · Drupal · Technical Content
+            </p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-blue-gray-900 leading-tight mb-5">
+              B2B Technical Content &amp; Drupal Development
+            </h1>
+            <p className="text-lg text-blue-gray-600 leading-relaxed mb-8 max-w-2xl">
+              CKEditor specialist, Drupal developer, and technical content marketer with 15+ years and 825+
+              published articles, writing about the tools I build with.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-12">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-blue-gray-900 text-white uppercase tracking-widest font-bold text-xs py-3.5 px-7 rounded-lg hover:bg-blue-gray-800 transition-colors"
+              >
+                Let&apos;s Work Together <ArrowRightIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="#writing"
+                className="inline-flex items-center gap-2 border border-blue-gray-200 text-blue-gray-900 uppercase tracking-widest font-bold text-xs py-3.5 px-7 rounded-lg hover:bg-blue-gray-50 transition-colors"
+              >
+                View My Work <ArrowRightIcon className="w-4 h-4" />
+              </a>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              {METRICS.map((m) => (
+                <div key={m.label}>
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-gray-900">{m.value}</div>
+                  <div className="text-xs text-blue-gray-500 mt-1">{m.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              15k
-            </Typography>
-            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              Followers
-            </Typography>
-          </div>
-          <div className="flex items-center gap-2 mt-3">
-            <Typography className="!text-gray-900 font-bold" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              1-Mil+
-              </Typography>
-            <Typography className="!text-gray-500 font-normal" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-              Views
-            </Typography>
+          <div className="lg:col-span-2">
+            <div className="relative mx-auto w-56 sm:w-72 lg:w-full max-w-sm">
+              <Image
+                src="/image/avatar1.jpg"
+                alt="Charles J. Gantt"
+                width={640}
+                height={640}
+                priority
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
-        <div className="flex mb-3">
-        <Typography variant="lead" className="!text-gray-500 mt-8" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
-          I&apos;m a seasoned Content Creator, Freelance Writer, and Drupal Developer with 15+ years of experience. Specializing in Drupal site building and electronics projects, I excel in managing multiple tasks and staying updated on industry trends. Let&apos;s connect and discuss how I can contribute to your projects.
-        </Typography>
-        </div>
-       </div>
-    </header>
+      </div>
+    </section>
   );
 }
 export default Hero;
