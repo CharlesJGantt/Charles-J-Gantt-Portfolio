@@ -2,10 +2,10 @@ import Image from "next/image";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const METRICS = [
-  { value: "825+", label: "Published Articles" },
-  { value: "15+", label: "Years Experience" },
-  { value: "1M+", label: "Content Views" },
   { value: "27+", label: "Published Bylines" },
+  { value: "16+", label: "Years Drupal" },
+  { value: "20+", label: "Years Content" },
+  { value: "825+", label: "Published Articles" },
 ];
 
 /** Hero: left-aligned copy + metrics, right-side headshot (CLAUDE.md §4). */
@@ -16,14 +16,15 @@ function Hero() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-3">
             <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-4">
-              CKEditor · Drupal · Technical Content
+              CKEditor · Drupal · RTE Consulting
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold text-blue-gray-900 dark:text-blue-gray-50 leading-tight mb-5">
-              B2B Technical Content &amp; Drupal Development
+              B2B Technical Content, RTE Consulting &amp; Drupal Development
             </h1>
             <p className="text-lg text-blue-gray-600 dark:text-blue-gray-300 leading-relaxed mb-8 max-w-2xl">
-              CKEditor specialist, Drupal developer, and technical content marketer with 15+ years and 825+
-              published articles, writing about the tools I build with.
+              Former CKEditor Technical Content Marketer. 25+ published bylines, open-source CKEditor 5 plugins on
+              GitHub, and enterprise migration consulting for platforms serving hundreds of U.S. universities. 16+
+              years of Drupal development.
             </p>
             <div className="flex flex-wrap gap-4 mb-12">
               <a
