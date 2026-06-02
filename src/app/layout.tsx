@@ -11,7 +11,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const SITE_URL = "https://charlesjgantt.online";
+const SITE_URL = "https://www.charlesjgantt.online";
 const TITLE = "Charles J. Gantt: B2B Technical Content, CKEditor Specialist & Drupal Developer";
 const DESCRIPTION =
   "Technical content marketer and Drupal developer specializing in CKEditor 5. 825+ published articles across CKEditor, TweakTown, and Element14. Available for content strategy, technical writing, and Drupal consulting.";
