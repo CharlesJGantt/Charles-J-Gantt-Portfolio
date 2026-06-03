@@ -22,9 +22,8 @@ function Hero() {
               B2B Technical Content, RTE Consulting &amp; Drupal Development
             </h1>
             <p className="text-lg text-blue-gray-600 dark:text-blue-gray-300 leading-relaxed mb-8 max-w-2xl">
-              Former CKEditor Technical Content Marketer. Open-source CKEditor 5 plugins on GitHub, and enterprise
-              migration consulting for platforms serving hundreds of U.S. universities. 16+ years of Drupal
-              development.
+              16+ years of Drupal development. Former Technical Content Marketer at CKEditor. Open-source CKEditor 5
+              plugins on GitHub. Enterprise migration consulting for platforms serving hundreds of U.S. universities.
             </p>
             <div className="flex flex-wrap gap-4 mb-12">
               <a
