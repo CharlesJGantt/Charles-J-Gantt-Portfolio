@@ -5,10 +5,10 @@
 const LOGOS = [
   { name: "CKEditor", slug: "ckeditor", url: "https://ckeditor.com" },
   { name: "Acquia", slug: "acquia", url: "https://www.acquia.com" },
+  { name: "Drupal.org", slug: "drupal", url: "https://www.drupal.org" },
   { name: "Element14", slug: "element14", url: "https://element14.com" },
   { name: "Efabless", slug: "efabless", url: "https://efabless.com" },
   { name: "TweakTown", slug: "tweaktown", url: "https://www.tweaktown.com" },
-  { name: "Drupal.org", slug: "drupal", url: "https://www.drupal.org" },
 ];
 
 export function TrustStrip() {
