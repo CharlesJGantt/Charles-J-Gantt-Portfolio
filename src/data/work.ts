@@ -24,7 +24,7 @@ export const CONSULTING: ClientWork[] = [
     roleAndDuration: "CKEditor Migration Consultant · December 2025 to April 2026",
     description: [
       "Independent consultant engaged to evaluate and document a full CKEditor 4 to CKEditor 5 migration path for Courseleaf, an academic operations platform used at hundreds of U.S. colleges and universities.",
-      "Delivered a 16-section technical whitepaper covering complete plugin mapping across all 57 CKE4 plugins, a CRITICAL/HIGH/MEDIUM/LOW risk register, iFrame-to-inline DOM architectural analysis, SSR incompatibility identification, GPL vs. commercial licensing analysis with enterprise cost modeling ($0 to $299K/year), and a structured evaluation of four alternative editors (CKEditor 5, Lexical, Editor.js, Quill v2) with head-to-head comparison tables.",
+      "Delivered a 16-section technical whitepaper covering complete plugin mapping across 50+ plugins, including many custom plugins, a CRITICAL/HIGH/MEDIUM/LOW risk register, iFrame-to-inline DOM architectural analysis, SSR incompatibility identification, GPL vs. commercial licensing analysis with enterprise cost modeling, and a structured evaluation of four alternative editors (CKEditor 5, Lexical, Editor.js, Quill v2) with head-to-head comparison tables.",
     ],
     tags: ["CKEditor 4/5", "Enterprise Consulting", "Drupal", "EdTech", "Technical Architecture", "Migration Planning"],
     note: "Engagement conducted under NDA. Document available upon request to qualified prospects.",
