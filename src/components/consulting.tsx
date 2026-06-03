@@ -19,7 +19,7 @@ export function Consulting() {
                 {w.category}
               </span>
               <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-bold text-lg leading-snug mb-1">{w.client}</h3>
-              <p className="text-blue-gray-400 text-sm mb-4">{w.roleAndDuration}</p>
+              <p className="text-blue-gray-500 dark:text-blue-gray-400 text-sm mb-4">{w.roleAndDuration}</p>
               <div className="mb-2">
                 {w.description.map((para, i) => (
                   <p key={i} className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed mb-4">
@@ -33,7 +33,7 @@ export function Consulting() {
                 ))}
               </div>
               {w.note && (
-                <p className="text-blue-gray-400 text-sm italic border-t border-blue-gray-100 dark:border-blue-gray-800 pt-4">{w.note}</p>
+                <p className="text-blue-gray-500 dark:text-blue-gray-400 text-sm italic border-t border-blue-gray-100 dark:border-blue-gray-800 pt-4">{w.note}</p>
               )}
             </div>
           </Card>

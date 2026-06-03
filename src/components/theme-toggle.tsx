@@ -21,7 +21,7 @@ export function ThemeToggle() {
     >
       {/* Render nothing theme-specific until mounted to avoid SSR/client mismatch. */}
       {mounted ? (
-        isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />
+        isDark ? <SunIcon aria-hidden="true" className="h-5 w-5" /> : <MoonIcon aria-hidden="true" className="h-5 w-5" />
       ) : (
         <span className="h-5 w-5" />
       )}

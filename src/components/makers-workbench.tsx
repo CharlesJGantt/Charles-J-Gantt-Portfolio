@@ -27,7 +27,7 @@ export function MakersWorkbench() {
             rel="noopener noreferrer"
             className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap"
           >
-            Watch on YouTube <ArrowTopRightOnSquareIcon className="w-4 h-4" />
+            Watch on YouTube <ArrowTopRightOnSquareIcon aria-hidden="true" className="w-4 h-4" />
           </a>
         }
       />
@@ -39,7 +39,7 @@ export function MakersWorkbench() {
       </div>
 
       {allLoaded ? (
-        <p className="text-center text-sm text-blue-gray-400 mt-8">All videos loaded</p>
+        <p className="text-center text-sm text-blue-gray-500 dark:text-blue-gray-400 mt-8">All videos loaded</p>
       ) : (
         <div className="flex justify-center mt-8">
           <button

@@ -33,7 +33,7 @@ export function SectionHeading({
     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
       <div>
         {kicker && (
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-2">{kicker}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-2">{kicker}</p>
         )}
         <h2 className="text-2xl font-bold text-blue-gray-900 dark:text-blue-gray-50 mb-1">{title}</h2>
         {subtitle && <p className="text-base text-blue-gray-500 dark:text-blue-gray-400 max-w-3xl leading-relaxed">{subtitle}</p>}

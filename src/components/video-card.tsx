@@ -30,7 +30,7 @@ export function VideoCard({ video }: { video: Video }) {
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors">
           <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
-            <PlayIcon className="w-7 h-7 text-white ml-1" />
+            <PlayIcon aria-hidden="true" className="w-7 h-7 text-white ml-1" />
           </div>
         </div>
         <span className="absolute top-3 left-3 bg-blue-gray-900 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
@@ -45,7 +45,7 @@ export function VideoCard({ video }: { video: Video }) {
           rel="noopener noreferrer"
           className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
         >
-          Watch Video <ArrowRightIcon className="w-4 h-4" />
+          Watch Video <ArrowRightIcon aria-hidden="true" className="w-4 h-4" />
         </a>
       </div>
     </Card>

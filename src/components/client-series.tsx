@@ -15,7 +15,7 @@ export function ClientSeries() {
           <VideoCard key={video.id} video={video} />
         ))}
       </div>
-      <p className="text-sm text-blue-gray-400 italic mt-6">{SERIES_NOTE}</p>
+      <p className="text-sm text-blue-gray-500 dark:text-blue-gray-400 italic mt-6">{SERIES_NOTE}</p>
     </Section>
   );
 }

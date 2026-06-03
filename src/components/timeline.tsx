@@ -18,7 +18,7 @@ export function Timeline() {
               {i < TIMELINE.length - 1 && <span className="w-px flex-1 bg-blue-gray-200 dark:bg-blue-gray-700 my-1" />}
             </div>
             <div className="pb-10 max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-1">{n.period}</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-1">{n.period}</p>
               <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-bold text-lg leading-snug">
                 {n.url ? (
                   <a href={n.url} target="_blank" rel="noopener noreferrer" className="hover:underline">

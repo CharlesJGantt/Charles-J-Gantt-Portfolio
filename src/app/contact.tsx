@@ -30,7 +30,7 @@ export function Contact() {
                 rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="flex items-center gap-3 text-white hover:text-blue-gray-200 transition-colors"
               >
-                <Icon className="h-5 w-5 flex-shrink-0" />
+                <Icon aria-hidden="true" className="h-5 w-5 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </a>
             ))}

@@ -74,8 +74,14 @@ export default function RootLayout({
       </head>
       <body className={`${roboto.className} bg-white text-blue-gray-900 dark:bg-blue-gray-950 dark:text-blue-gray-100`}>
         <Providers>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:rounded-lg focus:bg-blue-gray-900 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+          >
+            Skip to content
+          </a>
           <Nav />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
         </Providers>
       </body>

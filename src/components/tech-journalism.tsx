@@ -22,7 +22,7 @@ function JournalismCard({ post }: { post: JournalismPost }) {
         />
       </a>
       <div className="p-4 flex flex-col flex-1">
-        <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-1.5">{post.publication}</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-1.5">{post.publication}</p>
         <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-semibold text-base leading-snug mb-2">{post.title}</h3>
         <p className="text-blue-gray-600 dark:text-blue-gray-300 text-base leading-relaxed flex-1 mb-4">{post.desc}</p>
         <a
@@ -31,7 +31,7 @@ function JournalismCard({ post }: { post: JournalismPost }) {
           rel="noopener noreferrer"
           className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all mt-auto"
         >
-          Read More <ArrowRightIcon className="w-4 h-4" />
+          Read More <ArrowRightIcon aria-hidden="true" className="w-4 h-4" />
         </a>
       </div>
     </Card>
@@ -58,7 +58,7 @@ export function TechJournalism() {
       </div>
 
       {allLoaded ? (
-        <p className="text-center text-sm text-blue-gray-400 mt-8">All articles loaded</p>
+        <p className="text-center text-sm text-blue-gray-500 dark:text-blue-gray-400 mt-8">All articles loaded</p>
       ) : (
         <div className="flex justify-center mt-8">
           <button

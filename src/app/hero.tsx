@@ -15,7 +15,7 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-3">
-            <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-4">
               CKEditor · Drupal · RTE Consulting
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold text-blue-gray-900 dark:text-blue-gray-50 leading-tight mb-5">
@@ -30,13 +30,13 @@ function Hero() {
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-blue-gray-900 text-white uppercase tracking-widest font-bold text-xs py-3.5 px-7 rounded-lg hover:bg-blue-gray-800 transition-colors"
               >
-                Let&apos;s Work Together <ArrowRightIcon className="w-4 h-4" />
+                Let&apos;s Work Together <ArrowRightIcon aria-hidden="true" className="w-4 h-4" />
               </a>
               <a
                 href="#writing"
                 className="inline-flex items-center gap-2 border border-blue-gray-200 dark:border-blue-gray-700 text-blue-gray-900 dark:text-blue-gray-100 uppercase tracking-widest font-bold text-xs py-3.5 px-7 rounded-lg hover:bg-blue-gray-50 dark:hover:bg-blue-gray-800 transition-colors"
               >
-                View My Work <ArrowRightIcon className="w-4 h-4" />
+                View My Work <ArrowRightIcon aria-hidden="true" className="w-4 h-4" />
               </a>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">

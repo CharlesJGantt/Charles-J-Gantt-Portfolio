@@ -29,7 +29,7 @@ export function Nav() {
             href="#contact"
             className="inline-flex items-center gap-1.5 bg-white text-blue-gray-900 text-xs font-bold uppercase tracking-widest py-2 px-4 rounded-lg hover:bg-blue-gray-100 transition-colors"
           >
-            Hire Me <ArrowRightIcon className="w-3.5 h-3.5" />
+            Hire Me <ArrowRightIcon aria-hidden="true" className="w-3.5 h-3.5" />
           </a>
         </div>
       </nav>

@@ -24,10 +24,10 @@ export function DrupalDevelopment() {
                   href={m.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-gray-400 hover:text-blue-gray-900 transition-colors"
+                  className="text-blue-gray-500 dark:text-blue-gray-400 hover:text-blue-gray-900 transition-colors"
                   aria-label="View on GitHub"
                 >
-                  <CodeBracketIcon className="w-5 h-5" />
+                  <CodeBracketIcon aria-hidden="true" className="w-5 h-5" />
                 </a>
               </div>
               <h3 className="text-blue-gray-900 dark:text-blue-gray-50 font-bold text-lg leading-snug mb-2">{m.name}</h3>
@@ -51,7 +51,7 @@ export function DrupalDevelopment() {
                   rel="noopener noreferrer"
                   className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold hover:underline flex items-center gap-1"
                 >
-                  View on GitHub <ArrowTopRightOnSquareIcon className="w-3.5 h-3.5" />
+                  View on GitHub <ArrowTopRightOnSquareIcon aria-hidden="true" className="w-3.5 h-3.5" />
                 </a>
                 {m.drupalOrgUrl && (
                   <a
@@ -60,7 +60,7 @@ export function DrupalDevelopment() {
                     rel="noopener noreferrer"
                     className="text-blue-gray-900 dark:text-blue-gray-50 text-sm font-semibold hover:underline flex items-center gap-1"
                   >
-                    View on Drupal.org <ArrowTopRightOnSquareIcon className="w-3.5 h-3.5" />
+                    View on Drupal.org <ArrowTopRightOnSquareIcon aria-hidden="true" className="w-3.5 h-3.5" />
                   </a>
                 )}
               </div>

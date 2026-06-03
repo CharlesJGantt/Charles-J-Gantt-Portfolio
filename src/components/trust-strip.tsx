@@ -15,7 +15,7 @@ export function TrustStrip() {
   return (
     <section className="border-y border-blue-gray-100 dark:border-blue-gray-800 bg-blue-gray-50/60 dark:bg-blue-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-center text-xs font-bold uppercase tracking-widest text-blue-gray-400 mb-6">
+        <p className="text-center text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-6">
           Published &amp; Contracted By
         </p>
         <div className="flex flex-wrap items-start justify-center gap-x-10 sm:gap-x-14 gap-y-6">

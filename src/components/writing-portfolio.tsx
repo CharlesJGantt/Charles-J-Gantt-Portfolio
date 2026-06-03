@@ -40,7 +40,7 @@ function FeaturedArticle({ article }: { article: Article }) {
           <h3 className="text-2xl md:text-3xl font-bold text-blue-gray-900 dark:text-blue-gray-50 mb-3 leading-snug">{article.title}</h3>
           <p className="text-blue-gray-600 dark:text-blue-gray-300 leading-relaxed mb-4">{article.summary}</p>
           <span className="text-blue-gray-900 dark:text-blue-gray-100 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-            Read More <ArrowRightIcon className="w-4 h-4" />
+            Read More <ArrowRightIcon aria-hidden="true" className="w-4 h-4" />
           </span>
         </div>
       </div>
@@ -69,7 +69,7 @@ export function WritingPortfolio({ featured, articles }: { featured?: Article; a
         title="CKEditor Writing"
         subtitle="Published work for CKEditor's official blog and Acquia's developer platform, covering AI, collaboration, security, Drupal, and CMS strategy for developers, content architects, and enterprise buyers."
       />
-      <p className="text-sm text-blue-gray-400 italic mb-6 max-w-3xl">
+      <p className="text-sm text-blue-gray-500 dark:text-blue-gray-400 italic mb-6 max-w-3xl">
         Research conducted using Perplexity for source triangulation and Claude for draft acceleration. All final
         copy written, edited, and approved to CKEditor&apos;s editorial standard under my byline.
       </p>
@@ -80,6 +80,8 @@ export function WritingPortfolio({ featured, articles }: { featured?: Article; a
         {ARTICLE_FILTERS.map((tag) => (
           <button
             key={tag}
+            type="button"
+            aria-pressed={activeFilter === tag}
             onClick={() => handleFilter(tag)}
             className={cn(
               "px-3 py-1 rounded-full text-xs font-medium transition-colors",
@@ -100,12 +102,12 @@ export function WritingPortfolio({ featured, articles }: { featured?: Article; a
           ))}
         </div>
       ) : (
-        <p className="text-center text-sm text-blue-gray-400 py-8">No articles match that filter.</p>
+        <p className="text-center text-sm text-blue-gray-500 dark:text-blue-gray-400 py-8">No articles match that filter.</p>
       )}
 
       {activeFilter === "All" &&
         (allLoaded ? (
-          <p className="text-center text-sm text-blue-gray-400 mt-8">All articles loaded</p>
+          <p className="text-center text-sm text-blue-gray-500 dark:text-blue-gray-400 mt-8">All articles loaded</p>
         ) : (
           <div className="flex justify-center mt-8">
             <button
