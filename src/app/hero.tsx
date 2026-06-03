@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const METRICS = [
-  { value: "27+", label: "Published Bylines" },
+  { value: "20M+", label: "Content Views" },
   { value: "16+", label: "Years Drupal" },
   { value: "20+", label: "Years Content" },
   { value: "825+", label: "Published Articles" },
