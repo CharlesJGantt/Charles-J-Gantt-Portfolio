@@ -16,7 +16,7 @@ function Hero() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-3">
             <p className="text-xs font-bold uppercase tracking-widest text-blue-gray-500 dark:text-blue-gray-400 mb-4">
-              CKEditor · Drupal · RTE Consulting
+              CKEditor · Drupal · RTE Consulting · Technical Content Creation
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold text-blue-gray-900 dark:text-blue-gray-50 leading-tight mb-5">
               B2B Technical Content, RTE Consulting &amp; Drupal Development
